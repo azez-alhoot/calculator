@@ -1,0 +1,45 @@
+body {
+    background-color: aqua;
+}
+
+.calc{
+    text-align: center;
+    width: fit-content;
+    margin: 50px auto;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: burlywood;
+    border-radius: 4px;
+    border: 2px solid white;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.calc-btn {
+    width: 196px;
+    display: block;
+}
+
+#result-area {
+    height: 40px;
+    width: 196px;
+    background-color:black;
+    color: burlywood;
+    border: 2px solid white;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+    
+    overflow: hidden;
+}
