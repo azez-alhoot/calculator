@@ -3,71 +3,41 @@ let value = '';
 let calculator = document.getElementById("calculator");
 let resultArea = document.getElementById("result-area");
 
-function calculate() {
+function setResults() {
+    resultArea.textContent = value;
+}
 
+function calculate(){
+    
     if (value.includes('+')) {
         let arr = value.split('+')
-        sum(arr);
+        value = sum(arr);
+        setResults();
     }
-
+    
     else if (value.includes('-')) {
         let arr = value.split('-')
-        deduct(arr);
+        value =  deduct(arr);
+        setResults();
     }
-
+    
     else if (value.includes('*')) {
         let arr = value.split('*')
-        multiply(arr);
+        value = multiply(arr);
+        setResults();
     }
-
+    
     else if (value.includes('/')) {
         let arr = value.split('/')
-        devide(arr);
+        value = devide(arr);
+        setResults();
     }
-}
-
-function sum(arr) {
-    let result = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        result += parseInt(arr[i]);
-    }
-    value = result;
-    resultArea.textContent = result;
-}
-
-
-function deduct(arr) {
-    let result = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        result -= parseInt(arr[i]);
-    }
-    value = result;
-    resultArea.textContent = result;
-}
-
-function multiply(arr) {
-    let result = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        result *= parseInt(arr[i]);
-    }
-    value = result;
-    resultArea.textContent = result;
-}
-
-function devide(arr) {
-    let result = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        result /= parseInt(arr[i]);
-    }
-    value = result;
-    resultArea.textContent = result;
 }
 
 
 calculator.addEventListener("click", function (e) {
     if (e.target.className == 'btn') {
-
+        
         if (e.target.value == 'c') {
             value = '';
             resultArea.textContent = value;
@@ -78,3 +48,10 @@ calculator.addEventListener("click", function (e) {
         }
     }
 })
+
+
+let calcBtn = document.getElementById('do-calck');
+calcBtn.addEventListener('click', function(e){
+    calculate();
+})
+
