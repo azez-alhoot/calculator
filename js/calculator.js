@@ -10,7 +10,8 @@ function setResults() {
 function calculate(){
     
     if (value.includes('+')) {
-        let arr = value.split('+')
+        console.log(value);
+        let arr = value.split('+');
         value = sum(arr);
         setResults();
     }
@@ -36,6 +37,7 @@ function calculate(){
 
 
 calculator.addEventListener("click", function (e) {
+
     if (e.target.className == 'btn') {
         
         if (e.target.value == 'c') {
