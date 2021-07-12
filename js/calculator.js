@@ -1,4 +1,3 @@
-
 let value = '';
 let calculator = document.getElementById("calculator");
 let resultArea = document.getElementById("result-area");
@@ -10,31 +9,29 @@ function setResults() {
 function calculate(){
     
     if (value.includes('+')) {
-        console.log(value);
         let arr = value.split('+');
-        value = sum(arr);
+        value = operation(arr, '+');
         setResults();
     }
     
     else if (value.includes('-')) {
         let arr = value.split('-')
-        value =  deduct(arr);
+        value =  operation(arr, '-');
         setResults();
     }
     
     else if (value.includes('*')) {
         let arr = value.split('*')
-        value = multiply(arr);
+        value = operation(arr, '*');
         setResults();
     }
     
     else if (value.includes('/')) {
         let arr = value.split('/')
-        value = devide(arr);
+        value = operation(arr, '/');
         setResults();
     }
 }
-
 
 calculator.addEventListener("click", function (e) {
 
@@ -50,7 +47,6 @@ calculator.addEventListener("click", function (e) {
         }
     }
 })
-
 
 let calcBtn = document.getElementById('do-calck');
 calcBtn.addEventListener('click', function(e){
