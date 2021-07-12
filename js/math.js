@@ -1,5 +1,4 @@
 
-
 function sum(arr) {
     let result = 0;
     
@@ -9,7 +8,6 @@ function sum(arr) {
 
     return result;
 }
-
 
 function deduct(arr) {
     let result = arr[0];
@@ -37,5 +35,3 @@ function devide(arr) {
     
     return result;
 }
-
-
