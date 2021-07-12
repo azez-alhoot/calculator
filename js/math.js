@@ -1,4 +1,3 @@
-
 function sum(arr) {
     let result = 0;
     
